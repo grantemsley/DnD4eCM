@@ -22,136 +22,138 @@ Partial Class StatblockView
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.dfName = New System.Windows.Forms.TextBox
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.dfType = New System.Windows.Forms.TextBox
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.dfXP = New System.Windows.Forms.TextBox
-        Me.dfSpeed = New System.Windows.Forms.TextBox
-        Me.Label5 = New System.Windows.Forms.Label
-        Me.dfSenses = New System.Windows.Forms.TextBox
-        Me.Label6 = New System.Windows.Forms.Label
-        Me.dfResist = New System.Windows.Forms.TextBox
-        Me.Label7 = New System.Windows.Forms.Label
-        Me.dfVuln = New System.Windows.Forms.TextBox
-        Me.Label8 = New System.Windows.Forms.Label
-        Me.dfRegen = New System.Windows.Forms.TextBox
-        Me.Label9 = New System.Windows.Forms.Label
-        Me.dfInit = New System.Windows.Forms.TextBox
-        Me.Label10 = New System.Windows.Forms.Label
-        Me.dfActionPoints = New System.Windows.Forms.TextBox
-        Me.Label11 = New System.Windows.Forms.Label
-        Me.dfSaveBonus = New System.Windows.Forms.TextBox
-        Me.Label12 = New System.Windows.Forms.Label
-        Me.dfMaxHP = New System.Windows.Forms.TextBox
-        Me.Label13 = New System.Windows.Forms.Label
-        Me.Label14 = New System.Windows.Forms.Label
-        Me.dfBloodyHP = New System.Windows.Forms.TextBox
-        Me.dfAC = New System.Windows.Forms.TextBox
-        Me.Label15 = New System.Windows.Forms.Label
-        Me.dfFort = New System.Windows.Forms.TextBox
-        Me.Label16 = New System.Windows.Forms.Label
-        Me.dfReflex = New System.Windows.Forms.TextBox
-        Me.Label17 = New System.Windows.Forms.Label
-        Me.dfWill = New System.Windows.Forms.TextBox
-        Me.Label18 = New System.Windows.Forms.Label
-        Me.dfCon = New System.Windows.Forms.TextBox
-        Me.Label19 = New System.Windows.Forms.Label
-        Me.dfStr = New System.Windows.Forms.TextBox
-        Me.Label20 = New System.Windows.Forms.Label
-        Me.dfDex = New System.Windows.Forms.TextBox
-        Me.Label21 = New System.Windows.Forms.Label
-        Me.dfInt = New System.Windows.Forms.TextBox
-        Me.Label22 = New System.Windows.Forms.Label
-        Me.dfWis = New System.Windows.Forms.TextBox
-        Me.Label23 = New System.Windows.Forms.Label
-        Me.dfCha = New System.Windows.Forms.TextBox
-        Me.Label24 = New System.Windows.Forms.Label
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox
-        Me.Label40 = New System.Windows.Forms.Label
-        Me.dfSurges = New System.Windows.Forms.TextBox
-        Me.Label34 = New System.Windows.Forms.Label
-        Me.dfImmune = New System.Windows.Forms.TextBox
-        Me.GroupBox5 = New System.Windows.Forms.GroupBox
-        Me.dfLevel = New System.Windows.Forms.NumericUpDown
-        Me.cbPC = New System.Windows.Forms.CheckBox
-        Me.cbLeader = New System.Windows.Forms.CheckBox
-        Me.dfRole2 = New System.Windows.Forms.ComboBox
-        Me.dfRole = New System.Windows.Forms.ComboBox
-        Me.Label28 = New System.Windows.Forms.Label
-        Me.GroupBox6 = New System.Windows.Forms.GroupBox
-        Me.dfFeats = New System.Windows.Forms.TextBox
-        Me.Label35 = New System.Windows.Forms.Label
-        Me.dfSource = New System.Windows.Forms.TextBox
-        Me.Label31 = New System.Windows.Forms.Label
-        Me.dfEquipment = New System.Windows.Forms.TextBox
-        Me.Label27 = New System.Windows.Forms.Label
-        Me.dfLanguages = New System.Windows.Forms.TextBox
-        Me.Label26 = New System.Windows.Forms.Label
-        Me.dfSkills = New System.Windows.Forms.TextBox
-        Me.Label25 = New System.Windows.Forms.Label
-        Me.dfAlignment = New System.Windows.Forms.TextBox
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.pbCancel = New System.Windows.Forms.Button
-        Me.pbSave = New System.Windows.Forms.Button
-        Me.GroupBox8 = New System.Windows.Forms.GroupBox
-        Me.Label39 = New System.Windows.Forms.Label
-        Me.dfPowURL = New System.Windows.Forms.TextBox
-        Me.dfPowAuraSize = New System.Windows.Forms.NumericUpDown
-        Me.cbPowAura = New System.Windows.Forms.CheckBox
-        Me.pbPowDelete = New System.Windows.Forms.Button
-        Me.pbPowDown = New System.Windows.Forms.Button
-        Me.pbPowUp = New System.Windows.Forms.Button
-        Me.pbPowNew = New System.Windows.Forms.Button
-        Me.Label33 = New System.Windows.Forms.Label
-        Me.dfPowDesc = New System.Windows.Forms.TextBox
-        Me.Label32 = New System.Windows.Forms.Label
-        Me.dfPowKeywords = New System.Windows.Forms.TextBox
-        Me.labIcon = New System.Windows.Forms.Label
-        Me.dfPowType = New System.Windows.Forms.ComboBox
-        Me.Label30 = New System.Windows.Forms.Label
-        Me.dfPowAction = New System.Windows.Forms.TextBox
-        Me.Label29 = New System.Windows.Forms.Label
-        Me.dfPowName = New System.Windows.Forms.TextBox
-        Me.lbPowerList = New System.Windows.Forms.ListView
-        Me.colPowerName = New System.Windows.Forms.ColumnHeader
-        Me.colAction = New System.Windows.Forms.ColumnHeader
-        Me.pbPasteRTF = New System.Windows.Forms.Button
-        Me.pbLoadCharFromCB = New System.Windows.Forms.Button
-        Me.TabControl1 = New System.Windows.Forms.TabControl
-        Me.tabTraits = New System.Windows.Forms.TabPage
-        Me.Label38 = New System.Windows.Forms.Label
-        Me.dfPowerPoints = New System.Windows.Forms.TextBox
-        Me.tabEffects = New System.Windows.Forms.TabPage
-        Me.cbEffectHidden = New System.Windows.Forms.CheckBox
-        Me.pbEffectDelete = New System.Windows.Forms.Button
-        Me.pbEffectAdd = New System.Windows.Forms.Button
-        Me.lbEffectsHistory = New System.Windows.Forms.ListView
-        Me.colEffectName = New System.Windows.Forms.ColumnHeader
-        Me.colEffectDuration = New System.Windows.Forms.ColumnHeader
-        Me.dfEffectName = New System.Windows.Forms.ComboBox
-        Me.cbEffectBeneficial = New System.Windows.Forms.CheckBox
-        Me.Label36 = New System.Windows.Forms.Label
-        Me.dfEffectDuration = New System.Windows.Forms.ComboBox
-        Me.Label37 = New System.Windows.Forms.Label
-        Me.tabNotes = New System.Windows.Forms.TabPage
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox
-        Me.cbNotesOnly = New System.Windows.Forms.CheckBox
-        Me.dfNotes = New System.Windows.Forms.TextBox
-        Me.tabTraps = New System.Windows.Forms.TabPage
-        Me.Label45 = New System.Windows.Forms.Label
-        Me.dfDisplayName = New System.Windows.Forms.TextBox
-        Me.dfDesc = New System.Windows.Forms.TextBox
-        Me.Label41 = New System.Windows.Forms.Label
-        Me.dfTrap = New System.Windows.Forms.TextBox
-        Me.dfPuzzle = New System.Windows.Forms.TextBox
-        Me.Label42 = New System.Windows.Forms.Label
-        Me.dfHazard = New System.Windows.Forms.TextBox
-        Me.Label43 = New System.Windows.Forms.Label
-        Me.Label44 = New System.Windows.Forms.Label
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.dfName = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.dfType = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.dfXP = New System.Windows.Forms.TextBox()
+        Me.dfSpeed = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.dfSenses = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.dfResist = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.dfVuln = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.dfRegen = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.dfInit = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.dfActionPoints = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.dfSaveBonus = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.dfMaxHP = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.dfBloodyHP = New System.Windows.Forms.TextBox()
+        Me.dfAC = New System.Windows.Forms.TextBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.dfFort = New System.Windows.Forms.TextBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.dfReflex = New System.Windows.Forms.TextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.dfWill = New System.Windows.Forms.TextBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.dfCon = New System.Windows.Forms.TextBox()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.dfStr = New System.Windows.Forms.TextBox()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.dfDex = New System.Windows.Forms.TextBox()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.dfInt = New System.Windows.Forms.TextBox()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.dfWis = New System.Windows.Forms.TextBox()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.dfCha = New System.Windows.Forms.TextBox()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Label40 = New System.Windows.Forms.Label()
+        Me.dfSurges = New System.Windows.Forms.TextBox()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.dfImmune = New System.Windows.Forms.TextBox()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.dfLevel = New System.Windows.Forms.NumericUpDown()
+        Me.cbPC = New System.Windows.Forms.CheckBox()
+        Me.cbLeader = New System.Windows.Forms.CheckBox()
+        Me.dfRole2 = New System.Windows.Forms.ComboBox()
+        Me.dfRole = New System.Windows.Forms.ComboBox()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.dfFeats = New System.Windows.Forms.TextBox()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.dfSource = New System.Windows.Forms.TextBox()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.dfEquipment = New System.Windows.Forms.TextBox()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.dfLanguages = New System.Windows.Forms.TextBox()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.dfSkills = New System.Windows.Forms.TextBox()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.dfAlignment = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.pbCancel = New System.Windows.Forms.Button()
+        Me.pbSave = New System.Windows.Forms.Button()
+        Me.GroupBox8 = New System.Windows.Forms.GroupBox()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.dfPowURL = New System.Windows.Forms.TextBox()
+        Me.dfPowAuraSize = New System.Windows.Forms.NumericUpDown()
+        Me.cbPowAura = New System.Windows.Forms.CheckBox()
+        Me.pbPowDelete = New System.Windows.Forms.Button()
+        Me.pbPowDown = New System.Windows.Forms.Button()
+        Me.pbPowUp = New System.Windows.Forms.Button()
+        Me.pbPowNew = New System.Windows.Forms.Button()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.dfPowDesc = New System.Windows.Forms.TextBox()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.dfPowKeywords = New System.Windows.Forms.TextBox()
+        Me.labIcon = New System.Windows.Forms.Label()
+        Me.dfPowType = New System.Windows.Forms.ComboBox()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.dfPowAction = New System.Windows.Forms.TextBox()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.dfPowName = New System.Windows.Forms.TextBox()
+        Me.lbPowerList = New System.Windows.Forms.ListView()
+        Me.colPowerName = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.colAction = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.pbPasteRTF = New System.Windows.Forms.Button()
+        Me.pbLoadCharFromCB = New System.Windows.Forms.Button()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.tabTraits = New System.Windows.Forms.TabPage()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.dfPowerPoints = New System.Windows.Forms.TextBox()
+        Me.tabEffects = New System.Windows.Forms.TabPage()
+        Me.cbEffectHidden = New System.Windows.Forms.CheckBox()
+        Me.pbEffectDelete = New System.Windows.Forms.Button()
+        Me.pbEffectAdd = New System.Windows.Forms.Button()
+        Me.lbEffectsHistory = New System.Windows.Forms.ListView()
+        Me.colEffectName = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.colEffectDuration = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.dfEffectName = New System.Windows.Forms.ComboBox()
+        Me.cbEffectBeneficial = New System.Windows.Forms.CheckBox()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.dfEffectDuration = New System.Windows.Forms.ComboBox()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.tabNotes = New System.Windows.Forms.TabPage()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.cbNotesOnly = New System.Windows.Forms.CheckBox()
+        Me.dfNotes = New System.Windows.Forms.TextBox()
+        Me.tabTraps = New System.Windows.Forms.TabPage()
+        Me.Label45 = New System.Windows.Forms.Label()
+        Me.dfDisplayName = New System.Windows.Forms.TextBox()
+        Me.dfDesc = New System.Windows.Forms.TextBox()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.dfTrap = New System.Windows.Forms.TextBox()
+        Me.dfPuzzle = New System.Windows.Forms.TextBox()
+        Me.Label42 = New System.Windows.Forms.Label()
+        Me.dfHazard = New System.Windows.Forms.TextBox()
+        Me.Label43 = New System.Windows.Forms.Label()
+        Me.Label44 = New System.Windows.Forms.Label()
+        Me.Label46 = New System.Windows.Forms.Label()
+        Me.dfEffectColor = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -1162,6 +1164,8 @@ Partial Class StatblockView
         '
         'tabEffects
         '
+        Me.tabEffects.Controls.Add(Me.Label46)
+        Me.tabEffects.Controls.Add(Me.dfEffectColor)
         Me.tabEffects.Controls.Add(Me.cbEffectHidden)
         Me.tabEffects.Controls.Add(Me.pbEffectDelete)
         Me.tabEffects.Controls.Add(Me.pbEffectAdd)
@@ -1214,7 +1218,7 @@ Partial Class StatblockView
         Me.lbEffectsHistory.Location = New System.Drawing.Point(64, 12)
         Me.lbEffectsHistory.MultiSelect = False
         Me.lbEffectsHistory.Name = "lbEffectsHistory"
-        Me.lbEffectsHistory.Size = New System.Drawing.Size(282, 190)
+        Me.lbEffectsHistory.Size = New System.Drawing.Size(282, 163)
         Me.lbEffectsHistory.TabIndex = 10
         Me.lbEffectsHistory.TileSize = New System.Drawing.Size(270, 35)
         Me.lbEffectsHistory.UseCompatibleStateImageBehavior = False
@@ -1235,7 +1239,7 @@ Partial Class StatblockView
         Me.dfEffectName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.dfEffectName.FormattingEnabled = True
         Me.dfEffectName.Items.AddRange(New Object() {"Attack Penalty", "Blinded", "Dazed", "Deafened", "Defense Penalty", "Dominated", "Full Defense (+2 all def)", "Granting Combat Advantage", "Immobilized", "Marked", "Ongoing Damage", "Petrified", "Prone", "Regeneration", "Resist", "Restrained", "Second Wind (+2 all def)", "Slowed", "Stunned", "Surprised", "Unconscious", "Vulnerability", "Weakened"})
-        Me.dfEffectName.Location = New System.Drawing.Point(64, 208)
+        Me.dfEffectName.Location = New System.Drawing.Point(64, 181)
         Me.dfEffectName.Name = "dfEffectName"
         Me.dfEffectName.Size = New System.Drawing.Size(282, 21)
         Me.dfEffectName.Sorted = True
@@ -1254,7 +1258,7 @@ Partial Class StatblockView
         'Label36
         '
         Me.Label36.AutoSize = True
-        Me.Label36.Location = New System.Drawing.Point(11, 237)
+        Me.Label36.Location = New System.Drawing.Point(11, 213)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(47, 13)
         Me.Label36.TabIndex = 7
@@ -1265,7 +1269,7 @@ Partial Class StatblockView
         Me.dfEffectDuration.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.dfEffectDuration.FormattingEnabled = True
         Me.dfEffectDuration.Items.AddRange(New Object() {"End of Source's Next Turn", "End of Target's Next Turn", "End of the Current Turn", "End of the Encounter", "Save Ends", "Special", "Start of Source's Next Turn", "Start of Target's Next Turn", "Sustained", "Permanent"})
-        Me.dfEffectDuration.Location = New System.Drawing.Point(64, 234)
+        Me.dfEffectDuration.Location = New System.Drawing.Point(64, 208)
         Me.dfEffectDuration.Name = "dfEffectDuration"
         Me.dfEffectDuration.Size = New System.Drawing.Size(282, 21)
         Me.dfEffectDuration.TabIndex = 8
@@ -1273,7 +1277,7 @@ Partial Class StatblockView
         'Label37
         '
         Me.Label37.AutoSize = True
-        Me.Label37.Location = New System.Drawing.Point(23, 211)
+        Me.Label37.Location = New System.Drawing.Point(23, 184)
         Me.Label37.Name = "Label37"
         Me.Label37.Size = New System.Drawing.Size(35, 13)
         Me.Label37.TabIndex = 5
@@ -1428,6 +1432,25 @@ Partial Class StatblockView
         Me.Label44.TabIndex = 12
         Me.Label44.Text = "Hazard"
         Me.Label44.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label46
+        '
+        Me.Label46.AutoSize = True
+        Me.Label46.Location = New System.Drawing.Point(11, 239)
+        Me.Label46.Name = "Label46"
+        Me.Label46.Size = New System.Drawing.Size(31, 13)
+        Me.Label46.TabIndex = 20
+        Me.Label46.Text = "Color"
+        '
+        'dfEffectColor
+        '
+        Me.dfEffectColor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.dfEffectColor.FormattingEnabled = True
+        Me.dfEffectColor.Items.AddRange(New Object() {"Black", "DarkRed", "DarkGreen", "Blue", "BlueViolet", "Crimson", "DarkBlue", "DarkCyan", "Green", "DarkSlateBlue", "DeepPink", "DarkTurquoise", "DodgerBlue", "Indigo", "LightSeaGreen", "MidnightBlue", "Olive", "Orange", "OrangeRed"})
+        Me.dfEffectColor.Location = New System.Drawing.Point(64, 234)
+        Me.dfEffectColor.Name = "dfEffectColor"
+        Me.dfEffectColor.Size = New System.Drawing.Size(282, 21)
+        Me.dfEffectColor.TabIndex = 21
         '
         'StatblockView
         '
@@ -1612,4 +1635,6 @@ Partial Class StatblockView
     Friend WithEvents dfDisplayName As System.Windows.Forms.TextBox
     Friend WithEvents cbEffectHidden As System.Windows.Forms.CheckBox
     Friend WithEvents cbNotesOnly As System.Windows.Forms.CheckBox
+    Friend WithEvents Label46 As System.Windows.Forms.Label
+    Friend WithEvents dfEffectColor As System.Windows.Forms.ComboBox
 End Class

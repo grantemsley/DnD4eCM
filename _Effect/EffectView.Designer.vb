@@ -22,23 +22,25 @@ Partial Class EffectView
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.dfSource = New System.Windows.Forms.ComboBox
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.dfTarget = New System.Windows.Forms.ComboBox
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.dfDuration = New System.Windows.Forms.ComboBox
-        Me.pbSave = New System.Windows.Forms.Button
-        Me.pbCancel = New System.Windows.Forms.Button
-        Me.cbBeneficial = New System.Windows.Forms.CheckBox
-        Me.lbEffectsHistory = New System.Windows.Forms.ListView
-        Me.colEffectName = New System.Windows.Forms.ColumnHeader
-        Me.colEffectDuration = New System.Windows.Forms.ColumnHeader
-        Me.dfName = New System.Windows.Forms.ComboBox
-        Me.gbEffect = New System.Windows.Forms.GroupBox
-        Me.cbHidden = New System.Windows.Forms.CheckBox
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.dfSource = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.dfTarget = New System.Windows.Forms.ComboBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.dfDuration = New System.Windows.Forms.ComboBox()
+        Me.pbSave = New System.Windows.Forms.Button()
+        Me.pbCancel = New System.Windows.Forms.Button()
+        Me.cbBeneficial = New System.Windows.Forms.CheckBox()
+        Me.lbEffectsHistory = New System.Windows.Forms.ListView()
+        Me.colEffectName = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.colEffectDuration = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.dfName = New System.Windows.Forms.ComboBox()
+        Me.gbEffect = New System.Windows.Forms.GroupBox()
+        Me.cbHidden = New System.Windows.Forms.CheckBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.dfColor = New System.Windows.Forms.ComboBox()
         Me.gbEffect.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -56,7 +58,7 @@ Partial Class EffectView
         '
         Me.dfSource.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.dfSource.FormattingEnabled = True
-        Me.dfSource.Location = New System.Drawing.Point(60, 88)
+        Me.dfSource.Location = New System.Drawing.Point(60, 114)
         Me.dfSource.Name = "dfSource"
         Me.dfSource.Size = New System.Drawing.Size(282, 21)
         Me.dfSource.TabIndex = 10
@@ -64,7 +66,7 @@ Partial Class EffectView
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(13, 91)
+        Me.Label2.Location = New System.Drawing.Point(13, 114)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(41, 13)
         Me.Label2.TabIndex = 9
@@ -73,7 +75,7 @@ Partial Class EffectView
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(16, 118)
+        Me.Label3.Location = New System.Drawing.Point(13, 151)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(38, 13)
         Me.Label3.TabIndex = 11
@@ -83,7 +85,7 @@ Partial Class EffectView
         '
         Me.dfTarget.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.dfTarget.FormattingEnabled = True
-        Me.dfTarget.Location = New System.Drawing.Point(60, 115)
+        Me.dfTarget.Location = New System.Drawing.Point(60, 151)
         Me.dfTarget.Name = "dfTarget"
         Me.dfTarget.Size = New System.Drawing.Size(282, 21)
         Me.dfTarget.TabIndex = 12
@@ -109,7 +111,7 @@ Partial Class EffectView
         '
         'pbSave
         '
-        Me.pbSave.Location = New System.Drawing.Point(171, 160)
+        Me.pbSave.Location = New System.Drawing.Point(171, 206)
         Me.pbSave.Name = "pbSave"
         Me.pbSave.Size = New System.Drawing.Size(93, 26)
         Me.pbSave.TabIndex = 5
@@ -119,7 +121,7 @@ Partial Class EffectView
         'pbCancel
         '
         Me.pbCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.pbCancel.Location = New System.Drawing.Point(270, 160)
+        Me.pbCancel.Location = New System.Drawing.Point(267, 206)
         Me.pbCancel.Name = "pbCancel"
         Me.pbCancel.Size = New System.Drawing.Size(93, 26)
         Me.pbCancel.TabIndex = 6
@@ -175,6 +177,8 @@ Partial Class EffectView
         '
         'gbEffect
         '
+        Me.gbEffect.Controls.Add(Me.dfColor)
+        Me.gbEffect.Controls.Add(Me.Label5)
         Me.gbEffect.Controls.Add(Me.cbHidden)
         Me.gbEffect.Controls.Add(Me.dfName)
         Me.gbEffect.Controls.Add(Me.Label1)
@@ -187,7 +191,7 @@ Partial Class EffectView
         Me.gbEffect.Controls.Add(Me.Label2)
         Me.gbEffect.Location = New System.Drawing.Point(12, 12)
         Me.gbEffect.Name = "gbEffect"
-        Me.gbEffect.Size = New System.Drawing.Size(351, 142)
+        Me.gbEffect.Size = New System.Drawing.Size(351, 188)
         Me.gbEffect.TabIndex = 13
         Me.gbEffect.TabStop = False
         Me.gbEffect.Text = "Effect"
@@ -205,19 +209,38 @@ Partial Class EffectView
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.lbEffectsHistory)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 192)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 238)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(351, 329)
         Me.GroupBox1.TabIndex = 14
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Prior/Preset Effects from Source"
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(7, 81)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(31, 13)
+        Me.Label5.TabIndex = 14
+        Me.Label5.Text = "Color"
+        '
+        'dfColor
+        '
+        Me.dfColor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.dfColor.FormattingEnabled = True
+        Me.dfColor.Items.AddRange(New Object() {"Black", "DarkRed", "DarkGreen", "Blue", "BlueViolet", "Crimson", "DarkBlue", "DarkCyan", "Green", "DarkSlateBlue", "DeepPink", "DarkTurquoise", "DodgerBlue", "Indigo", "LightSeaGreen", "MidnightBlue", "Olive", "Orange", "OrangeRed"})
+        Me.dfColor.Location = New System.Drawing.Point(60, 78)
+        Me.dfColor.Name = "dfColor"
+        Me.dfColor.Size = New System.Drawing.Size(204, 21)
+        Me.dfColor.TabIndex = 15
+        '
         'EffectView
         '
         Me.AcceptButton = Me.pbSave
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.CancelButton = Me.pbCancel
-        Me.ClientSize = New System.Drawing.Size(371, 528)
+        Me.ClientSize = New System.Drawing.Size(371, 579)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.gbEffect)
         Me.Controls.Add(Me.pbCancel)
@@ -254,4 +277,6 @@ Partial Class EffectView
     Friend WithEvents gbEffect As System.Windows.Forms.GroupBox
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents cbHidden As System.Windows.Forms.CheckBox
+    Friend WithEvents dfColor As System.Windows.Forms.ComboBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
 End Class

@@ -74,9 +74,9 @@
 
             ' Add default effects
             If dfSource.Text = dfTarget.Text Then
-                PresetEffectAdd(New EffectBase("Full Defense (+2 all Def)", "Start of Source's Next Turn", True, False))
+                PresetEffectAdd(New EffectBase("Full Defense (+2 all Def)", "Start of Source's Next Turn", True, Color.DarkRed, False))
                 If fighter.bPC Then
-                    PresetEffectAdd(New EffectBase("Second Wind (+2 all Def)", "Start of Source's Next Turn", True, False))
+                    PresetEffectAdd(New EffectBase("Second Wind (+2 all Def)", "Start of Source's Next Turn", True, Color.DarkRed, False))
                 End If
             End If
 
@@ -86,11 +86,13 @@
                 listitem.Tag = eff.sEffectBaseID
                 listitem.ForeColor = Color.White
                 listitem.SubItems(1).ForeColor = Color.LightGray
-                If eff.bBeneficial Then
-                    listitem.BackColor = Color.DarkGreen
-                Else
-                    listitem.BackColor = Color.DarkRed
-                End If
+
+                listitem.BackColor = eff.cColor
+                'If eff.bBeneficial Then
+                'listitem.BackColor = Color.DarkGreen
+                'Else
+                'listitem.BackColor = Color.DarkRed
+                'End If
             Next
         End If
     End Sub
@@ -108,6 +110,7 @@
         dfTarget.SelectedItem = eff.sTargetHandle
         dfDuration.SelectedItem = eff.sDuration
         cbBeneficial.Checked = eff.bBeneficial
+        dfColor.SelectedItem = eff.cColor.Name
         cbHidden.Checked = eff.bHidden
         nOrigID = eff.nEffectID
         nOrigRound = eff.nRoundTill
@@ -118,6 +121,7 @@
         eff.sTargetHandle = dfTarget.Text
         eff.sDuration = dfDuration.Text
         eff.bBeneficial = cbBeneficial.Checked
+        eff.cColor = Color.FromName(dfColor.Text)
         eff.bHidden = cbHidden.Checked
         eff.nEffectID = nOrigID
         eff.nRoundTill = nOrigRound
@@ -155,6 +159,7 @@
                 dfName.Text = eff.sName
                 dfDuration.SelectedItem = eff.sDuration
                 cbBeneficial.Checked = eff.bBeneficial
+                dfColor.SelectedItem = eff.cColor.Name
                 cbHidden.Checked = eff.bHidden
             End If
         End If

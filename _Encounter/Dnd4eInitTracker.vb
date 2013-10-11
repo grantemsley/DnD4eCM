@@ -423,11 +423,11 @@ Public Class frmTracker
         pbReady_Click(sender, e)
     End Sub
     Private Sub ctxtMarkedToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ctxtMarkedToolStripMenuItem.Click
-        fight.EffectAdd("Marked", fight.sCurrentFighter.sCombatHandle, fight.sSelectedFighter, 5, False, False)
+        fight.EffectAdd("Marked", fight.sCurrentFighter.sCombatHandle, fight.sSelectedFighter, 5, False, Color.DarkGreen, False)
         EffectLoad()
     End Sub
     Private Sub ctxtMarkedEncounterToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ctxtMarkedEncounterToolStripMenuItem.Click
-        fight.EffectAdd("Marked", fight.sCurrentFighter.sCombatHandle, fight.sSelectedFighter, 7, False, False)
+        fight.EffectAdd("Marked", fight.sCurrentFighter.sCombatHandle, fight.sSelectedFighter, 7, False, Color.DarkGreen, False)
         EffectLoad()
     End Sub
     Private Sub SetAsActiveStance_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SetAsActiveStance.Click
@@ -437,7 +437,7 @@ Public Class frmTracker
                 For Each listitem As System.Windows.Forms.ListViewItem In lbPowerUsage.SelectedItems
                     For Each temppower As StatPower In fighter.PowerList
                         If listitem.Tag = temppower.sName Then
-                            fight.EffectAdd("Stance - " & temppower.sName, fight.sSelectedFighter, fight.sSelectedFighter, 7, True, False)
+                            fight.EffectAdd("Stance - " & temppower.sName, fight.sSelectedFighter, fight.sSelectedFighter, 7, True, Color.DarkRed, False)
                         End If
                     Next
                 Next
@@ -905,11 +905,12 @@ Public Class frmTracker
                 End If
                 listitem.SubItems(1).ForeColor = Color.LightGray
                 listitem.SubItems(2).ForeColor = Color.LightGray
-                If eff.bBeneficial Then
-                    listitem.BackColor = Color.DarkGreen
-                Else
-                    listitem.BackColor = Color.DarkRed
-                End If
+                listitem.BackColor = eff.cColor
+                'If eff.bBeneficial Then
+                'listitem.BackColor = Color.DarkGreen
+                'Else
+                'listitem.BackColor = Color.DarkRed
+                'End If
             Next
             EffectButtonUpdate()
         End If
@@ -1195,11 +1196,7 @@ Public Class frmTracker
                     For Each eff As Effect In fight.EffectsByTarget(thisfighter.sCombatHandle)
                         If Not eff.bHidden Then
                             Dim tempeffect As New System.Text.StringBuilder
-                            If eff.bBeneficial Then
-                                tempeffect.Append("<tr bgcolor='#999900'>")
-                            Else
-                                tempeffect.Append("<tr bgcolor='#FF0000'>")
-                            End If
+                            tempeffect.Append("<tr bgcolor='" & eff.cColor.ToArgb().ToString("X8").Substring(2, 6) & "'>")
                             tempeffect.Append("<td class='effectdetail'>" & eff.sName & "</td>")
                             tempeffect.Append("<td class='effectdetail'>Source: " & eff.sSourceHandle & "</td>")
                             tempeffect.Append("<td class='effectdetail'>Duration: " & eff.sDesc & "</td></tr>")

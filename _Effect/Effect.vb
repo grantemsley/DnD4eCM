@@ -71,7 +71,7 @@
     End Sub
     Public Sub New(ByVal p_sName As String, ByVal p_nID As Integer, _
                    ByVal p_sSource As String, ByVal p_sTarget As String, _
-                   ByVal p_nRoundTill As Integer, ByVal p_Dur As Duration, ByVal p_bBeneficial As Boolean, ByVal p_bHidden As Boolean)
+                   ByVal p_nRoundTill As Integer, ByVal p_Dur As Duration, ByVal p_bBeneficial As Boolean, ByVal p_cColor As Color, ByVal p_bHidden As Boolean)
         ClearAll()
         sName = p_sName
         nEffectID = p_nID
@@ -80,6 +80,7 @@
         DurationCode = p_Dur
         nRoundTill = p_nRoundTill
         bBeneficial = p_bBeneficial
+        cColor = p_cColor
         bHidden = p_bHidden
     End Sub
 

@@ -587,13 +587,13 @@
 
     ' Effect functionality
     Public Sub EffectAdd(ByRef eff As Effect)
-        EffectAdd(eff.sName, eff.sSourceHandle, eff.sTargetHandle, eff.DurationCode, eff.bBeneficial, eff.bHidden)
+        EffectAdd(eff.sName, eff.sSourceHandle, eff.sTargetHandle, eff.DurationCode, eff.bBeneficial, eff.cColor, eff.bHidden)
     End Sub
     Public Sub EffectAdd(ByVal p_sName As String, ByVal p_sSource As String, ByVal p_sTarget As String, _
-                   ByVal p_Dur As Effect.Duration, ByVal p_bBeni As Boolean, ByVal p_bHidden As Boolean)
+                   ByVal p_Dur As Effect.Duration, ByVal p_bBeni As Boolean, ByVal p_cColor As Color, ByVal p_bHidden As Boolean)
         Dim neweffect As New Effect(p_sName, nNextEffectID, p_sSource, p_sTarget, _
                                     EffectTillRound(p_sSource, p_sTarget, p_Dur), _
-                                    p_Dur, p_bBeni, p_bHidden)
+                                    p_Dur, p_bBeni, p_cColor, p_bHidden)
 
         If neweffect.bValid Then
             If Not ActiveEffects.Contains(nNextEffectID) Then

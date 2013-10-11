@@ -2,6 +2,7 @@
     ' Effect data
     Public sName As String
     Public bBeneficial As Boolean
+    Public cColor As Color
     Public bHidden As Boolean
 
     Public DurationCode As Duration
@@ -22,6 +23,7 @@
     Public Sub copy(ByRef tocopy As EffectBase)
         sName = tocopy.sName
         bBeneficial = tocopy.bBeneficial
+        cColor = tocopy.cColor
         bHidden = tocopy.bHidden
         DurationCode = tocopy.DurationCode
     End Sub
@@ -92,13 +94,15 @@
         sName = eff.sName
         DurationCode = eff.DurationCode
         bBeneficial = eff.bBeneficial
+        cColor = eff.cColor
         bHidden = eff.bHidden
     End Sub
-    Public Sub New(ByVal p_sName As String, ByVal p_sDur As String, ByVal p_bBeneficial As Boolean, ByVal p_bHidden As Boolean)
+    Public Sub New(ByVal p_sName As String, ByVal p_sDur As String, ByVal p_bBeneficial As Boolean, ByVal p_cColor As Color, ByVal p_bHidden As Boolean)
         ClearAll()
         sName = p_sName
         sDuration = p_sDur
         bBeneficial = p_bBeneficial
+        cColor = p_cColor
         bHidden = p_bHidden
     End Sub
 
@@ -107,6 +111,7 @@
         sName = ""
         DurationCode = Duration.None
         bBeneficial = False
+        cColor = Color.DarkRed
         bHidden = False
     End Sub
 
@@ -135,6 +140,7 @@
 
         writer.WriteElementString("name", sName)
         writer.WriteElementString("beni", CStr(bBeneficial))
+        writer.WriteElementString("color", cColor.Name)
         writer.WriteElementString("hidden", CStr(bHidden))
         writer.WriteElementString("durcode", CStr(DurationCode))
 
@@ -155,6 +161,8 @@
                             sName = reader.Value
                         Case "beni"
                             bBeneficial = CBool(reader.Value)
+                        Case "color"
+                            cColor = Color.FromName(reader.Value)
                         Case "hidden"
                             bHidden = CBool(reader.Value)
                         Case "durcode"

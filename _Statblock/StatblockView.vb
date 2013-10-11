@@ -616,15 +616,16 @@
             listitem.Tag = eff.sEffectBaseID
             listitem.ForeColor = Color.White
             listitem.SubItems(1).ForeColor = Color.LightGray
-            If eff.bBeneficial Then
-                listitem.BackColor = Color.DarkGreen
-            Else
-                listitem.BackColor = Color.DarkRed
-            End If
+            listitem.BackColor = eff.cColor
+            'If eff.bBeneficial Then
+            'listitem.BackColor = Color.DarkGreen
+            'Else
+            'listitem.BackColor = Color.DarkRed
+            'End If
         Next
     End Sub
     Private Sub pbEffectAdd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pbEffectAdd.Click
-        Dim eff As New EffectBase(dfEffectName.Text, dfEffectDuration.Text, cbEffectBeneficial.Checked, cbEffectHidden.Checked)
+        Dim eff As New EffectBase(dfEffectName.Text, dfEffectDuration.Text, cbEffectBeneficial.Checked, Color.FromName(dfEffectColor.Text), cbEffectHidden.Checked)
         If eff.bValid Then
             PresetEffectAdd(eff)
             ClearEffect()
