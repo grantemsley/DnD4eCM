@@ -254,6 +254,30 @@ Namespace My
                 Me("bAutoSave") = value
             End Set
         End Property
+
+        <Global.System.Configuration.UserScopedSettingAttribute(), _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://www.wizards.com/dnd/compendium/")> _
+        Public Property sCompendiumURL() As String
+            Get
+                Return CType(Me("sCompendiumURL"), String)
+            End Get
+            Set(value As String)
+                Me("sCompendiumURL") = value
+            End Set
+        End Property
+
+        <Global.System.Configuration.UserScopedSettingAttribute(), _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")> _
+        Public Property bCustomCompendium() As Boolean
+            Get
+                Return CType(Me("bCustomCompendium"), Boolean)
+            End Get
+            Set(value As Boolean)
+                Me("bCustomCompendium") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

@@ -53,5 +53,11 @@
     <Setting Name="bAutoSave" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
+    <Setting Name="sCompendiumURL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://www.wizards.com/dnd/compendium/</Value>
+    </Setting>
+    <Setting Name="bCustomCompendium" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

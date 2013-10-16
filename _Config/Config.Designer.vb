@@ -24,6 +24,9 @@ Partial Class Config
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tabGeneral = New System.Windows.Forms.TabPage()
+        Me.cfgCompendiumURL = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.cfgAutoSave = New System.Windows.Forms.CheckBox()
         Me.cfgAutoSurge = New System.Windows.Forms.CheckBox()
         Me.cfgSurgePlusPrompt = New System.Windows.Forms.CheckBox()
         Me.cfgWhiteMonsterBGs = New System.Windows.Forms.CheckBox()
@@ -43,7 +46,7 @@ Partial Class Config
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnOk = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
-        Me.cfgAutoSave = New System.Windows.Forms.CheckBox()
+        Me.cfgCustomCompendium = New System.Windows.Forms.CheckBox()
         Me.TabControl1.SuspendLayout()
         Me.tabGeneral.SuspendLayout()
         Me.tabSecondaryDisplay.SuspendLayout()
@@ -58,11 +61,14 @@ Partial Class Config
         Me.TabControl1.Multiline = True
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(385, 281)
+        Me.TabControl1.Size = New System.Drawing.Size(385, 328)
         Me.TabControl1.TabIndex = 0
         '
         'tabGeneral
         '
+        Me.tabGeneral.Controls.Add(Me.cfgCustomCompendium)
+        Me.tabGeneral.Controls.Add(Me.cfgCompendiumURL)
+        Me.tabGeneral.Controls.Add(Me.Label2)
         Me.tabGeneral.Controls.Add(Me.cfgAutoSave)
         Me.tabGeneral.Controls.Add(Me.cfgAutoSurge)
         Me.tabGeneral.Controls.Add(Me.cfgSurgePlusPrompt)
@@ -76,10 +82,36 @@ Partial Class Config
         Me.tabGeneral.Location = New System.Drawing.Point(4, 22)
         Me.tabGeneral.Name = "tabGeneral"
         Me.tabGeneral.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabGeneral.Size = New System.Drawing.Size(377, 255)
+        Me.tabGeneral.Size = New System.Drawing.Size(377, 302)
         Me.tabGeneral.TabIndex = 0
         Me.tabGeneral.Text = "General"
         Me.tabGeneral.UseVisualStyleBackColor = True
+        '
+        'cfgCompendiumURL
+        '
+        Me.cfgCompendiumURL.Location = New System.Drawing.Point(67, 264)
+        Me.cfgCompendiumURL.Name = "cfgCompendiumURL"
+        Me.cfgCompendiumURL.Size = New System.Drawing.Size(286, 20)
+        Me.cfgCompendiumURL.TabIndex = 11
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(29, 267)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(32, 13)
+        Me.Label2.TabIndex = 10
+        Me.Label2.Text = "URL:"
+        '
+        'cfgAutoSave
+        '
+        Me.cfgAutoSave.AutoSize = True
+        Me.cfgAutoSave.Location = New System.Drawing.Point(6, 213)
+        Me.cfgAutoSave.Name = "cfgAutoSave"
+        Me.cfgAutoSave.Size = New System.Drawing.Size(252, 17)
+        Me.cfgAutoSave.TabIndex = 9
+        Me.cfgAutoSave.Text = "Save encounter to Autosave.xml after each turn"
+        Me.cfgAutoSave.UseVisualStyleBackColor = True
         '
         'cfgAutoSurge
         '
@@ -179,7 +211,7 @@ Partial Class Config
         Me.tabSecondaryDisplay.Location = New System.Drawing.Point(4, 22)
         Me.tabSecondaryDisplay.Name = "tabSecondaryDisplay"
         Me.tabSecondaryDisplay.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabSecondaryDisplay.Size = New System.Drawing.Size(377, 225)
+        Me.tabSecondaryDisplay.Size = New System.Drawing.Size(377, 284)
         Me.tabSecondaryDisplay.TabIndex = 1
         Me.tabSecondaryDisplay.Text = "Secondary Display"
         Me.tabSecondaryDisplay.UseVisualStyleBackColor = True
@@ -255,7 +287,7 @@ Partial Class Config
         '
         'btnOk
         '
-        Me.btnOk.Location = New System.Drawing.Point(237, 315)
+        Me.btnOk.Location = New System.Drawing.Point(237, 361)
         Me.btnOk.Name = "btnOk"
         Me.btnOk.Size = New System.Drawing.Size(75, 23)
         Me.btnOk.TabIndex = 1
@@ -264,28 +296,28 @@ Partial Class Config
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(318, 315)
+        Me.btnCancel.Location = New System.Drawing.Point(318, 361)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(75, 23)
         Me.btnCancel.TabIndex = 2
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
-        'cfgAutoSave
+        'cfgCustomCompendium
         '
-        Me.cfgAutoSave.AutoSize = True
-        Me.cfgAutoSave.Location = New System.Drawing.Point(6, 213)
-        Me.cfgAutoSave.Name = "cfgAutoSave"
-        Me.cfgAutoSave.Size = New System.Drawing.Size(252, 17)
-        Me.cfgAutoSave.TabIndex = 9
-        Me.cfgAutoSave.Text = "Save encounter to Autosave.xml after each turn"
-        Me.cfgAutoSave.UseVisualStyleBackColor = True
+        Me.cfgCustomCompendium.AutoSize = True
+        Me.cfgCustomCompendium.Location = New System.Drawing.Point(6, 236)
+        Me.cfgCustomCompendium.Name = "cfgCustomCompendium"
+        Me.cfgCustomCompendium.Size = New System.Drawing.Size(170, 17)
+        Me.cfgCustomCompendium.TabIndex = 12
+        Me.cfgCustomCompendium.Text = "Use custom compendium URL"
+        Me.cfgCustomCompendium.UseVisualStyleBackColor = True
         '
         'Config
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(409, 348)
+        Me.ClientSize = New System.Drawing.Size(409, 405)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnOk)
         Me.Controls.Add(Me.TabControl1)
@@ -324,4 +356,7 @@ Partial Class Config
     Friend WithEvents cfgSurgePlusPrompt As System.Windows.Forms.CheckBox
     Friend WithEvents cfgAutoSurge As System.Windows.Forms.CheckBox
     Friend WithEvents cfgAutoSave As System.Windows.Forms.CheckBox
+    Friend WithEvents cfgCompendiumURL As System.Windows.Forms.TextBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents cfgCustomCompendium As System.Windows.Forms.CheckBox
 End Class
