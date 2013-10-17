@@ -486,7 +486,8 @@
                             sDesc = reader.Value
                         Case "url"
                             sURL = reader.Value
-                            If sURL.Contains("item.aspx") Then sURL = sURL.Replace("item.aspx?", "display.aspx?page=item&")
+                            'Don't think this is needed
+                            'If sURL.Contains("item.aspx") Then sURL = sURL.Replace("item.aspx?", "display.aspx?page=item&")
                     End Select
                 ElseIf reader.NodeType = Xml.XmlNodeType.EndElement Then
                     If reader.Name = "power" Then

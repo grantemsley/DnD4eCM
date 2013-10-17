@@ -1555,8 +1555,11 @@ Public Class Statblock
         sItemName = parts(0)
 
         ' The compendium search returns XML which will have the proper ID number we want
-        sSearchURL = "http://www.wizards.com/dndinsider/compendium/CompendiumSearch.asmx/KeywordSearch?Keywords=" & System.Web.HttpUtility.UrlEncode(sItemName) & "&Tab=item&NameOnly=true"
-
+        If My.Settings.bCustomCompendium Then
+            sSearchURL = My.Settings.sCompendiumURL & "search.php?keywords=" & System.Web.HttpUtility.UrlEncode(sItemName) & "&type=ExactName&tab=Item&NameOnly=true"
+        Else
+            sSearchURL = "http://www.wizards.com/dndinsider/compendium/CompendiumSearch.asmx/KeywordSearch?Keywords=" & System.Web.HttpUtility.UrlEncode(sItemName) & "&Tab=Item&NameOnly=true"
+        End If
         Try
             ' Get the search results
             sSearchResultsXML = client.DownloadString(sSearchURL)
@@ -1573,7 +1576,11 @@ Public Class Statblock
                 End If
             Loop
             If sID <> "" Then
-                sItemURL = "http://www.wizards.com/dndinsider/compendium/item.aspx?id=" & sID
+                If My.Settings.bCustomCompendium Then
+                    sItemURL = My.Settings.sCompendiumURL + "item.aspx?id=" & sID
+                Else
+                    sItemURL = "http://www.wizards.com/dndinsider/compendium/item.aspx?id=" & sID
+                End If
             Else
                 sItemURL = ""
             End If

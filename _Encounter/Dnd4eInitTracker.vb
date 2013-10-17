@@ -1088,7 +1088,13 @@ Public Class frmTracker
                         If listitem.Tag = temppower.sName Then
                             Try
                                 'Start(temppower.sURL)
-                                dfPowerBlockHTML.Navigate(temppower.sURL)
+                                If My.Settings.bCustomCompendium Then
+                                    Dim MyUrl As String
+                                    MyUrl = temppower.sURL.Replace("http://www.wizards.com/dndinsider/compendium/", My.Settings.sCompendiumURL)
+                                    dfPowerBlockHTML.Navigate(MyUrl)
+                                Else
+                                    dfPowerBlockHTML.Navigate(temppower.sURL)
+                                End If
                             Catch ex As Exception
                             End Try
                         End If

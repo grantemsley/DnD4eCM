@@ -217,13 +217,13 @@ Public Class StatLibraryView
         End If
         If My.Computer.Clipboard.ContainsText(TextDataFormat.Text) Then
             Dim url As String = My.Computer.Clipboard.GetText.ToString
-            If url.Contains("www.wizards.com/dndinsider/compendium/monster.aspx") Or url.Contains("www.wizards.com/dndinsider/compendium/display.aspx?page=monster") Or url.Contains("http://www.wizards.com/dndinsider/compendium/trap.aspx") Or url.Contains("www.wizards.com/dndinsider/compendium/display.aspx?page=trap") Or url.Contains("monster.php") Or url.Contains("trap.php") Then
+            If url.Contains("www.wizards.com/dndinsider/compendium/monster.aspx") Or url.Contains("www.wizards.com/dndinsider/compendium/display.aspx?page=monster") Or url.Contains("http://www.wizards.com/dndinsider/compendium/trap.aspx") Or url.Contains("www.wizards.com/dndinsider/compendium/display.aspx?page=trap") Or url.Contains("monster.php") Or url.Contains("trap.php") Or url.Contains("monster.aspx") Or url.Contains("trap.aspx") Then
                 dfStatBlockHTML.Navigate(url)
                 WaitingFor(2)
                 If dfStatBlockHTML.DocumentText.Contains("Already a Subscriber?") Then
                     MsgBox("Please log in to your D&D Insider Account, and then click Paste again")
                 Else
-                    If dfStatBlockHTML.DocumentText.Contains("display.aspx?page=monster&amp") Or dfStatBlockHTML.DocumentText.Contains("display.aspx?page=trap&amp") Or dfStatBlockHTML.DocumentText.Contains("display.php?page=monster&amp") Or dfStatBlockHTML.DocumentText.Contains("display.php?page=trap&amp") Then
+                    If dfStatBlockHTML.DocumentText.Contains("display.aspx?page=monster&amp") Or dfStatBlockHTML.DocumentText.Contains("display.aspx?page=trap&amp") Or dfStatBlockHTML.DocumentText.Contains("display.php?page=monster&amp") Or dfStatBlockHTML.DocumentText.Contains("display.php?page=trap&amp") Or dfStatBlockHTML.DocumentText.Contains("monster.php") Or dfStatBlockHTML.DocumentText.Contains("trap.php") Or dfStatBlockHTML.DocumentText.Contains("monster.aspx") Or dfStatBlockHTML.DocumentText.Contains("trap.aspx") Then
                         Dim stat As New Statblock
                         stat.Statblock_HTML = StripHTML(dfStatBlockHTML.DocumentText, url)
                         If stat.Valid Then
