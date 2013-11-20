@@ -18,6 +18,7 @@
         cfgSurgePlusPrompt.Checked = My.Settings.bSurgePlusPrompt
         cfgAutoSurge.Checked = My.Settings.bAutoSurge
         cfgAutoSave.Checked = My.Settings.bAutoSave
+        cfgKeepDead.Checked = My.Settings.bKeepDead
         cfgCustomCompendium.Checked = My.Settings.bCustomCompendium
         cfgCompendiumURL.Text = My.Settings.sCompendiumURL.ToString
         changed = False
@@ -62,6 +63,7 @@
         My.Settings.bSurgePlusPrompt = cfgSurgePlusPrompt.Checked
         My.Settings.bAutoSurge = cfgAutoSurge.Checked
         My.Settings.bAutoSave = cfgAutoSave.Checked
+        My.Settings.bKeepDead = cfgKeepDead.Checked
         My.Settings.bCustomCompendium = cfgCustomCompendium.Checked
         My.Settings.sCompendiumURL = cfgCompendiumURL.Text
         changed = False

@@ -28,7 +28,7 @@
 
     Public Property sInitStatus() As String
         Get
-            If Not bActive And Not bPC Then
+            If Not bActive And Not (bPC Or My.Settings.bKeepDead) Then
                 Return "Inactive"
             ElseIf sRoundStatus = "Ready" Or sRoundStatus = "Delay" Or sRoundStatus = "Rolling" Then
                 Return sRoundStatus
@@ -358,9 +358,17 @@
             End If
 
             If Not bPC Then
-                Return bActive
+                If My.Settings.bKeepDead Then
+                    If nCurrHP > (-1 * nBloodyHP) Then
+                        Return True
+                    Else
+                        Return False
+                    End If
+                Else
+                    Return bActive
+                End If
             End If
-
+            
             If nCurrHP > (-1 * nBloodyHP) And nDeathSaveFailed < 3 Then
                 Return True
             Else
@@ -446,7 +454,7 @@
         If Not bAlive Then
             Slay()
         ElseIf Not bActive Then
-            If Not bPC Then
+            If Not bPC And Not My.Settings.bKeepDead Then
                 Slay()
             Else
                 bReady = False

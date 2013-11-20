@@ -24,6 +24,7 @@ Partial Class Config
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tabGeneral = New System.Windows.Forms.TabPage()
+        Me.cfgCustomCompendium = New System.Windows.Forms.CheckBox()
         Me.cfgCompendiumURL = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.cfgAutoSave = New System.Windows.Forms.CheckBox()
@@ -46,7 +47,7 @@ Partial Class Config
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnOk = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
-        Me.cfgCustomCompendium = New System.Windows.Forms.CheckBox()
+        Me.cfgKeepDead = New System.Windows.Forms.CheckBox()
         Me.TabControl1.SuspendLayout()
         Me.tabGeneral.SuspendLayout()
         Me.tabSecondaryDisplay.SuspendLayout()
@@ -61,11 +62,12 @@ Partial Class Config
         Me.TabControl1.Multiline = True
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(385, 328)
+        Me.TabControl1.Size = New System.Drawing.Size(385, 361)
         Me.TabControl1.TabIndex = 0
         '
         'tabGeneral
         '
+        Me.tabGeneral.Controls.Add(Me.cfgKeepDead)
         Me.tabGeneral.Controls.Add(Me.cfgCustomCompendium)
         Me.tabGeneral.Controls.Add(Me.cfgCompendiumURL)
         Me.tabGeneral.Controls.Add(Me.Label2)
@@ -82,14 +84,24 @@ Partial Class Config
         Me.tabGeneral.Location = New System.Drawing.Point(4, 22)
         Me.tabGeneral.Name = "tabGeneral"
         Me.tabGeneral.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabGeneral.Size = New System.Drawing.Size(377, 302)
+        Me.tabGeneral.Size = New System.Drawing.Size(377, 335)
         Me.tabGeneral.TabIndex = 0
         Me.tabGeneral.Text = "General"
         Me.tabGeneral.UseVisualStyleBackColor = True
         '
+        'cfgCustomCompendium
+        '
+        Me.cfgCustomCompendium.AutoSize = True
+        Me.cfgCustomCompendium.Location = New System.Drawing.Point(6, 269)
+        Me.cfgCustomCompendium.Name = "cfgCustomCompendium"
+        Me.cfgCustomCompendium.Size = New System.Drawing.Size(170, 17)
+        Me.cfgCustomCompendium.TabIndex = 12
+        Me.cfgCustomCompendium.Text = "Use custom compendium URL"
+        Me.cfgCustomCompendium.UseVisualStyleBackColor = True
+        '
         'cfgCompendiumURL
         '
-        Me.cfgCompendiumURL.Location = New System.Drawing.Point(67, 264)
+        Me.cfgCompendiumURL.Location = New System.Drawing.Point(67, 297)
         Me.cfgCompendiumURL.Name = "cfgCompendiumURL"
         Me.cfgCompendiumURL.Size = New System.Drawing.Size(286, 20)
         Me.cfgCompendiumURL.TabIndex = 11
@@ -97,7 +109,7 @@ Partial Class Config
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(29, 267)
+        Me.Label2.Location = New System.Drawing.Point(29, 300)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(32, 13)
         Me.Label2.TabIndex = 10
@@ -211,7 +223,7 @@ Partial Class Config
         Me.tabSecondaryDisplay.Location = New System.Drawing.Point(4, 22)
         Me.tabSecondaryDisplay.Name = "tabSecondaryDisplay"
         Me.tabSecondaryDisplay.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabSecondaryDisplay.Size = New System.Drawing.Size(377, 284)
+        Me.tabSecondaryDisplay.Size = New System.Drawing.Size(377, 302)
         Me.tabSecondaryDisplay.TabIndex = 1
         Me.tabSecondaryDisplay.Text = "Secondary Display"
         Me.tabSecondaryDisplay.UseVisualStyleBackColor = True
@@ -287,7 +299,7 @@ Partial Class Config
         '
         'btnOk
         '
-        Me.btnOk.Location = New System.Drawing.Point(237, 361)
+        Me.btnOk.Location = New System.Drawing.Point(237, 379)
         Me.btnOk.Name = "btnOk"
         Me.btnOk.Size = New System.Drawing.Size(75, 23)
         Me.btnOk.TabIndex = 1
@@ -296,22 +308,22 @@ Partial Class Config
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(318, 361)
+        Me.btnCancel.Location = New System.Drawing.Point(318, 379)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(75, 23)
         Me.btnCancel.TabIndex = 2
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
-        'cfgCustomCompendium
+        'cfgKeepDead
         '
-        Me.cfgCustomCompendium.AutoSize = True
-        Me.cfgCustomCompendium.Location = New System.Drawing.Point(6, 236)
-        Me.cfgCustomCompendium.Name = "cfgCustomCompendium"
-        Me.cfgCustomCompendium.Size = New System.Drawing.Size(170, 17)
-        Me.cfgCustomCompendium.TabIndex = 12
-        Me.cfgCustomCompendium.Text = "Use custom compendium URL"
-        Me.cfgCustomCompendium.UseVisualStyleBackColor = True
+        Me.cfgKeepDead.AutoSize = True
+        Me.cfgKeepDead.Location = New System.Drawing.Point(6, 236)
+        Me.cfgKeepDead.Name = "cfgKeepDead"
+        Me.cfgKeepDead.Size = New System.Drawing.Size(172, 17)
+        Me.cfgKeepDead.TabIndex = 13
+        Me.cfgKeepDead.Text = "Keep dead monsters in combat"
+        Me.cfgKeepDead.UseVisualStyleBackColor = True
         '
         'Config
         '
@@ -359,4 +371,5 @@ Partial Class Config
     Friend WithEvents cfgCompendiumURL As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents cfgCustomCompendium As System.Windows.Forms.CheckBox
+    Friend WithEvents cfgKeepDead As System.Windows.Forms.CheckBox
 End Class
